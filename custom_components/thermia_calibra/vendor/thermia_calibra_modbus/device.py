@@ -13,6 +13,7 @@ from .readings import (
     GenesisHoldingRegisters,
     GenesisHotWaterRegisters,
     GenesisInputRegisters,
+    GenesisRoomSensorRegisters,
 )
 
 if TYPE_CHECKING:
@@ -36,6 +37,7 @@ class ThermiaCalibra:
         self.holding_registers = GenesisHoldingRegisters(unit)
         self.discrete_inputs = GenesisDiscreteInputs(unit)
         self.hot_water_registers = GenesisHotWaterRegisters(unit)
+        self.room_sensor_registers = GenesisRoomSensorRegisters(unit)
 
     HEATPUMP_STATUS_BY_CODE = {
         1: "Manual operation",
@@ -120,6 +122,11 @@ class ThermiaCalibra:
         await self._async_update_component(
             "hot_water_registers",
             self.hot_water_registers,
+            report,
+        )
+        await self._async_update_component(
+            "room_sensor_registers",
+            self.room_sensor_registers,
             report,
         )
         return report

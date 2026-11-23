@@ -2,6 +2,12 @@
 
 All notable changes to this project are documented here.
 
+## Unreleased
+
+- Add a Room Temperature sensor for the optional Thermia room sensor on input
+  register 121. It is read separately, so units without a room sensor keep all
+  other readings available.
+
 ## 0.1.10 - 2026-10-02
 
 - Add a control for the externally supplied outdoor temperature on Modbus

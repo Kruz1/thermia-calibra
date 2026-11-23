@@ -126,6 +126,15 @@ SENSORS: tuple[ThermiaCalibraSensorDescription, ...] = (
         value_fn=lambda device: device.input_registers.outdoor_temperature,
     ),
     ThermiaCalibraSensorDescription(
+        key="room_temperature",
+        name="Room Temperature",
+        device_class=SensorDeviceClass.TEMPERATURE,
+        native_unit_of_measurement=UnitOfTemperature.CELSIUS,
+        state_class=SensorStateClass.MEASUREMENT,
+        report_name="room_sensor_registers",
+        value_fn=lambda device: device.room_sensor_registers.room_temperature,
+    ),
+    ThermiaCalibraSensorDescription(
         key="bms_outdoor_temperature",
         name="External Outdoor Temperature (Modbus)",
         device_class=SensorDeviceClass.TEMPERATURE,

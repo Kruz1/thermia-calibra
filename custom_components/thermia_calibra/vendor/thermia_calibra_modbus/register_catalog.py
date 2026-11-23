@@ -276,6 +276,16 @@ REGISTER_CATALOG: tuple[RegisterDefinition, ...] = (
         0x4E20,
     ),
     RegisterDefinition(
+        "room_temperature",
+        "Room Temperature",
+        "input",
+        121,
+        "int16",
+        0.1,
+        "C",
+        0x4E20,
+    ),
+    RegisterDefinition(
         "comfort_wheel_setting",
         "Comfort Wheel Setting",
         "holding",

@@ -8,6 +8,7 @@ from .readings import (
     GenesisHoldingRegisters,
     GenesisHotWaterRegisters,
     GenesisInputRegisters,
+    GenesisRoomSensorRegisters,
 )
 
 __all__ = [
@@ -16,6 +17,7 @@ __all__ = [
     "GenesisHoldingRegisters",
     "GenesisHotWaterRegisters",
     "GenesisInputRegisters",
+    "GenesisRoomSensorRegisters",
     "REGISTER_CATALOG",
     "RegisterDefinition",
     "ThermiaCalibra",

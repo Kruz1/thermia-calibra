@@ -15,7 +15,7 @@ Requirements:
 
 ## Features
 
-- temperature, compressor, circulation pump and operating-hour sensors
+- temperature (including the optional Thermia room sensor), compressor, circulation pump and operating-hour sensors
 - active alarm count and anti-legionella warning
 - heating, hot-water, anti-legionella and passive-cooling operating status
 - controls for heating, passive cooling, tap water and anti-legionella

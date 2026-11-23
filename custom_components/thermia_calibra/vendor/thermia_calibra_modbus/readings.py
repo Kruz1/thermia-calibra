@@ -119,6 +119,20 @@ class GenesisInputRegisters(Component):
     """Mix valve cooling opening degree."""
 
 
+class GenesisRoomSensorRegisters(Component):
+    """Optional Thermia room-sensor input registers.
+
+    Kept apart from the main input registers so a unit without a room sensor
+    cannot make the other input readings unavailable.
+    """
+
+    register_space = "input"
+    max_gap = 0
+
+    room_temperature = gauge(121, 0.1, nan=THERMIA_MISSING_VALUE)
+    """Room temperature measured by the optional Thermia room sensor."""
+
+
 class GenesisDiscreteInputs(Component):
     """Read-only Thermia Genesis discrete inputs."""
 
